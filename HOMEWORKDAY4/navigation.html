@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Main Navigation Container */
+.navbar {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 15px 30px;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Navigation Links Container */
+.nav-links {
+  display: flex; 
+  gap: 20px; 
+  list-style: none; 
+}
+
+/* Individual Link Elements */
+.nav-links a {
+  text-decoration: none; 
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+/* Interactive Hover State */
+.nav-links a:hover {
+  color: #ffd700; 
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; 
+    gap: 15px; 
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column; 
+    gap: 10px;
+  }
+}
+      </style>
+      
+    <nav class="navbar">
+  <div class="logo">GO CODE</div>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+
+</body>
+</html>

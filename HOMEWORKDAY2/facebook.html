@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Log In or Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 400px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            font-size: 28px;
+            color: #1877f2;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        p {
+            font-size: 15px;
+            color: #606770;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccd0d5;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 15px;
+        }
+        .inline-inputs {
+            display: flex;
+            gap: 10px;
+        }
+        .gender-group {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        .gender-box {
+            border: 1px solid #ccd0d5;
+            padding: 10px;
+            border-radius: 5px;
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 4px;
+        }
+        button {
+            width: 100%;
+            background-color: #42b72a;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        button:hover {
+            background-color: #36a420;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>facebook</h2>
+    <p>Create a new account. It's quick and easy.</p>
+    
+    <form action="#" method="POST">
+        <!-- Name Fields -->
+        <div class="inline-inputs">
+            <input type="text" placeholder="First name" required>
+            <input type="text" placeholder="Surname" required>
+        </div>
+
+        <!-- Contact & Password Fields -->
+        <input type="email" placeholder="Mobile number or email address" required>
+        <input type="password" placeholder="New password" required>
+
+        <!-- Birthday Selection -->
+        <label style="font-size: 12px; color: #606770;">Date of birth</label>
+        <div class="inline-inputs">
+            <select>
+                <option>21</option>
+            </select>
+            <select>
+                <option>Jun</option>
+            </select>
+            <select>
+                <option>2006</option>
+            </select>
+        </div>
+
+        <!-- Gender Selection -->
+        <label style="font-size: 12px; color: #606770;">Gender</label>
+        <div class="gender-group">
+            <div class="gender-box">
+                <label>Female</label>
+                <input type="radio" name="gender" value="female">
+            </div>
+            <div class="gender-box">
+                <label>Male</label>
+                <input type="radio" name="gender" value="male">
+            </div>
+            <div class="gender-box">
+                <label>Custom</label>
+                <input type="radio" name="gender" value="custom">
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit">Sign Up</button>
+    </form>
+</div>
+
+</body>
+</html>

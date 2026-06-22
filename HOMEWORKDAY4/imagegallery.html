@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image gallery</title>
+    <style>
+        h1{
+            text-align: center;
+            border-radius: 20%;
+            text-decoration: dashed;
+            background-color: #777;
+        }
+        div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: 100%;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+.gallery{
+    height: 100%;
+    padding: 20px;
+    ;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+    </style>
+</head>
+<body> 
+    <h1>IMAGE GALLERY</h1>
+    <div class="gallery">
+  <div class="gallery">
+    <a target="_blank" href="https://img.magnific.com/free-photo/vertical-shot-long-river-with-trees-banks_181624-13778.jpg">
+      <img src="https://img.magnific.com/free-photo/vertical-shot-long-river-with-trees-banks_181624-13778.jpg" alt="RIVERS">
+    </a>
+    <div class="desc">River symbolize,life change and presistence</div>
+  </div>
+</div>
+
+<div class="gallery">
+  <div class="gallery">
+    <a target="_blank" href="https://img.magnific.com/free-photo/vertical-shot-foret-de-soignes-belgium-brussels-with-sun-shining-through-branches_181624-5081.jpg">
+      <img src="https://img.magnific.com/free-photo/vertical-shot-foret-de-soignes-belgium-brussels-with-sun-shining-through-branches_181624-5081.jpg" alt="Forest">
+    </a>
+    <div class="desc">There is always an adventure waiting in the woods</div>
+  </div>
+</div>
+
+<div class="gallery">
+  <div class="gallery">
+    <a target="_blank" href="https://img.magnific.com/free-photo/beautiful-landscape-with-aurora-borealis_23-2150439624.jpg">
+      <img src="https://img.magnific.com/free-photo/beautiful-landscape-with-aurora-borealis_23-2150439624.jpg" alt="Northern Lights">
+    </a>
+    <div class="desc">Nature wins the award with best glow up</div>
+  </div>
+</div>
+
+<div class="gallery">
+  <div class="gallery">
+    <a target="_blank" href="https://img.magnific.com/free-photo/vertical-shot-river-surrounded-by-mountains-meadows-scotland_181624-27881.jpg">
+      <img src="https://img.magnific.com/free-photo/vertical-shot-river-surrounded-by-mountains-meadows-scotland_181624-27881.jpg" alt="Mountains">
+    </a>
+    <div class="desc">Every mountain top is within reach if you just keep climbing</div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+</body>
+</html>

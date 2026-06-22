@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Main Navigation Container */
+.navbar {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 15px 30px;
+  background-color: #333;
+  color: #fff;padding: 20px;
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Navigation Links Container */
+.nav-links {
+  display: flex; 
+  gap: 20px; 
+  list-style: none; 
+}
+
+/* Individual Link Elements */
+.nav-links a {
+  text-decoration: none; 
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+/* Interactive Hover State */
+.nav-links a:hover {
+  color: #ffd700; 
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; 
+    gap: 15px; 
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column; 
+    gap: 10px;
+  }
+}
+ h1{
+            text-align: center;
+            border-radius: 20%;
+            text-decoration: dashed;
+            background-color: #777;
+            padding: 10px;
+        }
+        div.gallery {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 50%;
+  height: 50%;
+  border-radius: 0%;
+  text-decoration: dashed;
+}
+div.desc {
+  text-align:center ;
+padding: 20px;
+}
+      </style>
+      
+    <nav class="navbar">
+  <div class="logo">CONTRIBUTE LOVE</div>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+    <h1>ABOUT</h1>
+    <div class="gallery">
+  <div class="gallery">
+    <a target="_blank" href="https://img.magnific.com/free-photo/putting-money-coins-saving-glass-bottle-concept-investment-mutual-fund-finance-business-placed-textbook-content-money-saving-education_1150-45710.jpg">
+      <img src="https://img.magnific.com/free-photo/putting-money-coins-saving-glass-bottle-concept-investment-mutual-fund-finance-business-placed-textbook-content-money-saving-education_1150-45710.jpg" alt="Education">
+    </a>
+    <div class="desc">Education symbolize,life change and presistence</div>
+  </div>
+</div>
+<div class="gallery">
+  <div class="gallery">
+    <a target="_blank" href="https://img.magnific.com/free-photo/people-holding-rubber-heart_1150-18576.jpg">
+      <img src="https://img.magnific.com/free-photo/people-holding-rubber-heart_1150-18576.jpg" alt="Education">
+    </a>
+    <div class="desc">education is the most powerful weapon from which you can change the world</div>
+  </div>
+</div>
+
+</body>
+</html>
