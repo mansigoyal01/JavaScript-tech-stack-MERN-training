@@ -1,0 +1,413 @@
+* {
+    margin: 0%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {}
+
+nav {
+    display: flex;
+    background-color: darksalmon;
+
+}
+
+.left-nav {
+    flex: 30%;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.right-nav {
+    flex: 70%;
+    text-align: right;
+}
+
+.right-nav ul {
+    list-style-type: none;
+}
+
+.right-nav ul li {
+    display: inline-block;
+    padding: 10px;
+}
+
+.right-nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.right-nav ul li:hover {
+    background-color: black;
+}
+
+.right-nav ul li:hover a {
+    color: darksalmon;
+}
+
+section {}
+
+.banner {
+    height: 400px;
+    border: 1px groove black;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.header-text {
+    font-size: 90px;
+    background-image: linear-gradient(darksalmon, white);
+    background-clip: text;
+    color: transparent;
+
+}
+
+.header-button {
+    text-decoration: none;
+    font-size: 25px;
+    background-color: darksalmon;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-weight: bold;
+}
+
+/* About section CSS */
+
+.aboutMe {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    margin-bottom: 10%;
+}
+
+.aboutMe h2 {
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.left-about {
+    font-size: 20px;
+}
+
+.left-about p {
+    text-align: justify;
+}
+
+.right-about {
+    height: 299px;
+}
+
+/* Skill csss starts here */
+.skill-section {
+    padding: 20px;
+    background-color: black;
+    color: darksalmon;
+    margin-bottom: 10%;
+}
+
+.skill {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    width: 60%;
+    margin: auto;
+}
+
+.skill-section h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skill-name {
+    font-size: 30px;
+    background-color: darksalmon;
+    color: black;
+    padding: 10px 0px;
+    border-radius: 40px;
+
+    animation-name: skill;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+/* animation for skill */
+
+@keyframes skill {
+    from {
+        background-color: darksalmon;
+    }
+
+    to {
+        background-color: whitesmoke;
+    }
+}
+
+/* Project Section CSS */
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 70px;
+    margin-bottom: 10%;
+}
+h2{
+    font-size: 50px;
+    text-align: center;
+}
+
+.projects img {
+    height: 200px;
+}
+.projects img:hover{
+    transform: scale(1.1);
+
+}
+.projects .project-name {
+    padding: 20px;
+}
+
+.card {
+    border: 2px inset black;
+
+}
+
+.card .card-header {
+    padding: 20px;
+    border-bottom: 2px inset black;
+
+}
+
+.card .card-body {
+    font-size: 30px;
+    text-align: center;
+    border-bottom: 2px inset black;
+    padding: 10px;
+}
+
+.card .card-footer {
+    padding: 10px;
+
+    text-align: center;
+}
+
+.card-footer a {
+    font-size: 20px;
+    padding: 5px;
+    text-decoration: none;
+}
+@keyframes project {
+    from {
+        background-color: darksalmon;
+    }
+
+    to {
+        background-color: whitesmoke;
+    }
+}
+
+
+/* Qualification css starts here */
+.Qualification-section {
+    padding: 20px;
+    background-color: black;
+    color: darksalmon;
+    margin-bottom: 10%;
+}
+
+.Qualification {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    width: 60%;
+    margin: auto;
+}
+
+.Qualification-section h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.qualification-name {
+    font-size: 30px;
+    background-color: darksalmon;
+    color: black;
+    padding: 10px 0px;
+    border-radius: 40px;
+
+    animation-name: skill;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes Qualification {
+    from {
+        background-color: darksalmon;
+    }
+
+    to {
+        background-color: whitesmoke;
+    }
+}
+
+/* HIRE ME  css starts here */
+.hire-section {
+    background-color: #f4f4f9;
+    padding: 80px 20px;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.hire-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.hire-section p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.cta-buttons .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+}
+
+.btn-secondary:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+@keyframes hire-me {
+    from {
+        background-color: darksalmon;
+    }
+
+    to {
+        background-color: whitesmoke;
+    }}
+
+
+    /* linkedin css starts here */
+.linkedin-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #0077b5; 
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  padding: 40px;
+  margin-bottom: 10%;
+}
+.linkedin-icon {
+  width: 28px;
+  height: 28px;
+  fill: #ffffff; 
+}
+
+/* Hover effects */
+.linkedin-btn:hover {
+  background-color: #005582; 
+  transform: scale(1.05);
+}
+
+.linkedin-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #0A66C2; /* Official LinkedIn Blue */
+    color: #ffffff; /* White icon color */
+    font-size: 24px; /* Icon size */
+    border-radius: 8px; /* Smooth rounded corners */
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.linkedin-btn:hover {
+    background-color: #004182; /* Slightly darker blue on hover */
+    transform: scale(1.05); /* Slight pop out effect */
+}
+ @keyframes Linkedin {
+    from {
+        background-color: darksalmon;
+    }
+
+    to {
+        background-color: whitesmoke;
+    }}
+    
+
+ 
+
+/* github css starts here */
+.logo-container {
+            display: flex;
+            justify-content: left;
+            align-items: left;
+            height: 100vh;
+            background-color: #f6f8fa;
+            margin-bottom: 10%;
+        }
+
+        /* GitHub Icon Styling */
+        .github-icon {
+            width: 64px;          
+            height: 64px;
+            fill: #24292e;        
+            transition: fill 0.3s ease, transform 0.2s ease;
+            cursor: pointer;
+        }
+
+        /* Hover Effect */
+        .github-icon:hover {
+            fill: #0969da;        
+            transform: scale(1.1); 
+        }
+         
+        @keyframes Github {
+    from {
+        background-color: darksalmon;
+    }
+
+    to {
+        background-color: whitesmoke;
+    }}
+    
