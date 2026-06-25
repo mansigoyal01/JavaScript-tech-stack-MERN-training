@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zodiac Sign Finder</title>
+</head>t
+<style>
+body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #711c91, #ea00d9);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            text-align: center;
+            width: 400px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            width: 80%;
+            font-size: 16px;
+        }
+        button {
+            background-color: #00d2ff;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #fff;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        th {
+            background-color: rgba(0,0,0,0.3);
+        }
+        #errorMsg {
+            color: #ff4d4d;
+            font-weight: bold;
+        }
+</style>
+<body>
+<div class="container">
+    <h2>Zodiac Sign Finder</h2>
+    <label for="dob">Enter your birthdate:</label><br>
+    <input type="date" id="dob"><br>
+    <button onclick="findZodiac()">Find Sign</button>
+    
+    <div id="errorMsg"></div>
+    
+    <table id="resultTable" style="display:none;">
+        <tr>
+            <th>Your Sign</th>
+            <td id="zodiacSign"></td>
+        </tr>
+        <tr>
+            <th>Birthdate</th>
+            <td id="birthDateStr"></td>
+        </tr>
+    </table>
+</div>
+<script>
+    function findZodiac() {
+        const dobInput = document.getElementById('dob').value;
+        const errorMsg = document.getElementById('errorMsg');
+        const resultTable = document.getElementById('resultTable');
+        
+        errorMsg.innerHTML = ""; // Clear previous errors
+
+        if (!dobInput) {
+            errorMsg.innerHTML = "Please select a valid date!";
+            resultTable.style.display = "none";
+            return;
+        }
+
+        const date = new Date(dobInput);
+        const day = date.getDate();
+        const month = date.getMonth() + 1; // 0-indexed, so Jan = 1, Dec = 12
+
+        let sign = "";
+
+        // Applying if-else if condition logic
+        if ((month == 1 && day >= 20) || (month == 2 && day <= 18)) {
+            sign = "Aquarius";
+        } else if ((month == 2 && day >= 19) || (month == 3 && day <= 20)) {
+            sign = "Pisces";
+        } else if ((month == 3 && day >= 21) || (month == 4 && day <= 19)) {
+            sign = "Aries";
+        } else if ((month == 4 && day >= 20) || (month == 5 && day <= 20)) {
+            sign = "Taurus";
+        } else if ((month == 5 && day >= 21) || (month == 6 && day <= 20)) {
+            sign = "Gemini";
+        } else if ((month == 6 && day >= 21) || (month == 7 && day <= 22)) {
+            sign = "Cancer";
+        } else if ((month == 7 && day >= 23) || (month == 8 && day <= 22)) {
+            sign = "Leo";
+        } else if ((month == 8 && day >= 23) || (month == 9 && day <= 22)) {
+            sign = "Virgo";
+        } else if ((month == 9 && day >= 23) || (month == 10 && day <= 22)) {
+            sign = "Libra";
+        } else if ((month == 10 && day >= 23) || (month == 11 && day <= 21)) {
+            sign = "Scorpio";
+        } else if ((month == 11 && day >= 22) || (month == 12 && day <= 21)) {
+            sign = "Sagittarius";
+        } else if ((month == 12 && day >= 22) || (month == 1 && day <= 19)) {
+            sign = "Capricorn";
+        }
+
+        // Display results
+        document.getElementById('zodiacSign').innerText = sign;
+        document.getElementById('birthDateStr').innerText = date.toLocaleDateString('en-IN');
+        resultTable.style.display = "table";
+    }
+</script>
+
+
+</body>
+</html>
+
