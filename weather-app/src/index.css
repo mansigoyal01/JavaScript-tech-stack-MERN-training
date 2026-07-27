@@ -1,0 +1,168 @@
+:root {
+  --bg-clear: linear-gradient(135deg, #46c566, #86d9e7);
+  --bg-rain: linear-gradient(135deg, #8dab52, #d12f9e);
+  --bg-cloudy: linear-gradient(135deg, #dc6c1d, #ad2224);
+  --bg-default: linear-gradient(135deg, #1cb4b7, #2450c0);
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Seamless fallback background transition */
+  background: var(--bg-default);
+  transition: background 0.8s ease;
+  overflow: hidden;
+}
+
+/* Glassmorphism Outer Container Card */
+.app-container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 2rem;
+  border-radius: 24px;
+  width: 90%;
+  max-width: 400px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 100%;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+/* Minimal Search Input Elements */
+.search-box {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-box input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-box input:focus {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.search-box button {
+  padding: 0 22px;
+  background: white;
+  color: #1f4068;
+  border: none;
+  border-radius: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.search-box button:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+}
+
+.search-box button:active {
+  transform: translateY(0);
+}
+
+/* Core Main Temperature Display Typography */
+.weather-info h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.desc {
+  font-size: 1rem;
+  text-transform: capitalize;
+  opacity: 0.85;
+}
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+.temp {
+  font-size: 4rem;
+  font-weight: 300;
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+/* Informational Split Utility Row */
+.details {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 1rem 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.detail-item strong {
+  display: block;
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-item p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Interface Loading and Failure Indicators */
+.loading {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  animation: pulse 1.5s infinite;
+}
+
+.error-msg {
+  background: rgba(220, 53, 69, 0.2);
+  border: 1px solid rgba(220, 53, 69, 0.4);
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
